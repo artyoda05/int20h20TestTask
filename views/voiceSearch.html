@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
 </head>
+
 <body>
     <h1>Voice search</h1>
+    <div class="uploadSection">
+        <form action="">
+            <p>Choose an audio file to guess the song</p>
+            <input id="audioFile" type="file" accept="audio/*">
+            <input type="submit" value="Search by lyrics">
+        </form>
+    </div>
+    <div class="recordingSection">
+        <p>Record an audio file to guess the song</p>
+        <button id="recordButton" onclick="startRecording()">Record</button>
+        <button id="stopButton" onclick="stopRecording()" type="submit">Stop recording</button>
+        <button id="uploadButton" onclick="uploadRecording()">Search by voice</button>
+    </div>
+
+
 </body>
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+<script src="scripts/voiceSearchScript.js"></script>
+
 </html>
