@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const stream = require('streamifier');
 
 var request = require('request')
 var config = require('../config');
@@ -9,7 +10,6 @@ var config = require('../config');
 router.get('/search', (req, res) => {
     const lyrics = req.query.lyrics;
     const data = {
-        'return': 'timecode,apple_music,deezer,spotify',
         'api_token': config.audd_api_token,
         'method': 'findLyrics',
         'q': lyrics
@@ -17,6 +17,28 @@ router.get('/search', (req, res) => {
     request({
         uri: 'https://api.audd.io/',
         form: data,
+        method: 'POST'
+    }, function (err, resApi, body) {
+        const data = JSON.parse(body);
+        res.send(data.result);
+    });
+});
+
+// POST /search
+// finds possible track names and artists by sample file
+router.post('/search', (req, res) => {
+    const file = req.files.audio_data;
+    //console.log(file);
+    
+    const data = {
+        'file': stream.createReadStream(file.data)
+        //'return': 'deezer',
+        //'api_token': config.audd_api_token
+    };
+    request({
+        uri: 'https://api.audd.io/',
+        api_token: config.audd_api_token,
+        formData: data,
         method: 'POST'
     }, function (err, resApi, body) {
         const data = JSON.parse(body);

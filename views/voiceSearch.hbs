@@ -1,9 +1,9 @@
 <h1>Voice search</h1>
 <div class="uploadSection">
-    <form action="">
+    <form action="/search" method="POST" enctype="multipart/form-data">
         <p>Choose an audio file to guess the song</p>
-        <input id="audioFile" type="file" accept="audio/*">
-        <input type="submit" value="Search by lyrics">
+        <input name="audio_data" id="audio_data" type="file" accept="audio/*">
+        <input type="submit" value="Search by audio">
     </form>
 </div>
 <div class="recordingSection">
