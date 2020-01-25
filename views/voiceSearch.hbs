@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<h1>Voice search</h1>
+<div class="uploadSection">
+    <form action="/search" method="POST" enctype="multipart/form-data">
+        <p>Choose an audio file to guess the song</p>
+        <input name="audio_data" id="audio_data" type="file" accept="audio/*">
+        <input type="submit" value="Search by audio">
+    </form>
+</div>
+<div class="recordingSection">
+    <p>Record an audio file to guess the song</p>
+    <button id="recordButton" onclick="startRecording()">Record</button>
+    <button id="stopButton" onclick="stopRecording()" type="submit">Stop recording</button>
+    <button id="uploadButton" onclick="uploadRecording()">Search by voice</button>
+</div>
+=======
 <div class="center">
     <div class="voice_search_menu">
         <h1>Voice search</h1>
@@ -18,6 +34,7 @@
             <button class="_button" id="stopButton" onclick="stopRecording()" type="submit">Stop recording</button>
             <button class="_button" id="uploadButton" onclick="uploadRecording()">Search by voice</button>
         </div>
+>>>>>>> fffc259781ba7d21f636272ec0c6f7429053521b
 
     </div>
 </div>

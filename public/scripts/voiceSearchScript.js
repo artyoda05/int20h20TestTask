@@ -23,6 +23,7 @@ var constraints = {
     audio: true,
     video: false
 }
+
 function startRecording() {
     var audioContext = new AudioContext;
     recordButton.disabled = true;
@@ -65,15 +66,15 @@ function uploadRecording() {
 
 function uploadAudioToServer(blob) {
     var filename = new Date().toISOString();
-    var xhr=new XMLHttpRequest();
-		  xhr.onload=function(e) {
-		      if(this.readyState === 4) {
-		          console.log("Server returned: ",e.target.responseText);
-		      }
-		  };
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function(e) {
+        if(this.readyState === 4) {
+            console.log("Server returned: ",e.target.responseText);
+        }
+    };
     var fd = new FormData();
     fd.append("audio_data", blob, filename);
-    xhr.open("POST", "post adress" /* Insert post address */, true);
+    xhr.open("POST", "/search" /* Insert post address */, true);
     xhr.send(fd);
 }
 
