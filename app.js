@@ -8,7 +8,6 @@ var indexRouter = require('./routes/index');
 var textSearchRouter = require('./routes/textSearch');
 var voiceSearchRouter = require('./routes/voiceSearch');
 var guessingGameRouter = require('./routes/guessingGame');
-var apiSearchRouter = require('./routes/apiSearch');
 
 var app = express();
 
@@ -26,7 +25,6 @@ app.use('/', indexRouter);
 app.use('/textSearch', textSearchRouter);
 app.use('/voiceSearch', voiceSearchRouter);
 app.use('/guessingGame', guessingGameRouter);
-app.use('/', apiSearchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
