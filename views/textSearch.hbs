@@ -17,6 +17,11 @@
             <p>Title: {{title}}</p>
             <p>Artist: {{artist}}</p>
             <p>Lyrics<br> {{lyrics}}</p>
+            <p>
+                {{#each deezerData}}
+                    <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&width=500&height=200&color=ff0000&layout=dark&size=medium&type=tracks&id={{id}}&app_id=1" width="500" height="200"></iframe>
+                {{/each}}
+            </p>
         </div>
         {{/each}}
     </ul>
