@@ -1,0 +1,19 @@
+div.voice_search_menu {
+    margin-top: 20%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p.desc {
+    font-size: 36px;
+}
+
+.lyrics_input {
+    font-size: 80px; 
+}
+
+.select_mode_button:focus {
+    border: none;
+}
