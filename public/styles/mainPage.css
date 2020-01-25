@@ -1,0 +1,37 @@
+    div.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.center_circle {
+        margin-top: 50px;
+        width: 450px;
+        height: 450px;
+        padding: 150px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background: rgb(120, 60, 180);
+        border: 0px solid rgba(120, 60, 180);
+        border-radius: calc(100%/2);
+        animation: example;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes example {
+        0% {border: 0px solid rgba(120, 60, 180);}
+        50% {margin-top: 35px; border: 15px solid rgba(179, 121, 255, 0.39)};
+        100% {border: 0px solid rgba(120, 60, 180);}
+    }
+
+    div.center_links {
+        display: flex;
+        width: 100%;
+        margin-top: 50px;
+        justify-content: space-evenly;
+    }
