@@ -5,4 +5,4 @@ npm install
 
 npm run start (requires nodemon)
 or
-node index.js
+node ./bin/www
