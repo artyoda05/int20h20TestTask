@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 const stream = require('streamifier');
+const fs = require('fs');
+const path = require('path');
 
 var request = require('request')
 var config = require('../config');
+const bodyParser = require('busboy-body-parser');
+router.use(bodyParser());
 
 // GET /search?lyrics=:lyrics
 // finds possible track names and artists by part of lyrics 
@@ -26,25 +30,26 @@ router.get('/search', (req, res) => {
 
 // POST /search
 // finds possible track names and artists by sample file
-router.post('/search', (req, res) => {
+router.post('/search', async (req, res) => {
     const file = req.files.audio_data;
     //console.log(file);
+    fs.writeFileSync( path.join(__dirname, `../temporary/${file.name}`), file.data);
     
-    const data = {
-        'file': stream.createReadStream(file.data)
-        //'return': 'deezer',
-        //'api_token': config.audd_api_token
+    var data = {
+        'file': fs.createReadStream(path.join(__dirname, `../temporary/${file.name}`)),
+        'return': 'deezer',
+        'api_token': config.audd_api_token
     };
+    
     request({
         uri: 'https://api.audd.io/',
-        api_token: config.audd_api_token,
         formData: data,
         method: 'POST'
-    }, function (err, resApi, body) {
+      }, function (err, result, body) {
         const data = JSON.parse(body);
-        console.log(data);
         res.send(data.result);
-    });
+        fs.unlink(path.join(__dirname, `../temporary/${file.name}`), (err) => console.log(err));
+      });
 });
 
 //GET /searchDeezer?artist=:artist&song=:song
