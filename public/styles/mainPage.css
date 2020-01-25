@@ -1,9 +1,3 @@
-    div.center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     div.center_circle {
         margin-top: 50px;
         width: 450px;

@@ -5,8 +5,38 @@ body {
     text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
     color: rgb(255, 255, 255)
 }
-
+p {
+    font-size: 20px;
+}
 a { 
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+
+div.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._button {
+    margin: 2px;
+    color: inherit;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    box-shadow: 2px 2px rgb(101, 25, 172)
+}
+
+._button:disabled {
+    margin: 2px;
+    color: inherit;
+    padding: 10px;
+    border: none;   
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(168, 138, 196);
+    box-shadow: 2px 2px rgb(101, 25, 172)
 }

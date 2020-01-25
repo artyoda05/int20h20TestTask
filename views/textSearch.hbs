@@ -1,4 +1,27 @@
-<form action="/search" method="GET">
-    <input type="search" name="lyrics">
-    <input type="submit" value="search">
-</form>
+<div class="center">
+    <div class="lyric_search">
+        <h1>Search song by lyrics</h1>
+        <form action="" method="GET">
+            <div class="lyric_search_input">
+                <input class="lyrics_input" type="search" name="lyrics">
+                <input class="_button" class="lyrics_input" type="submit" value="Search">
+            </div>
+        </form>
+
+        <div style="margin-top: 100px;">
+            <ul>
+            {{#each data}}
+                <li>
+                    song id: {{song_id}} <br>
+                    artist id: {{artist_id}} <br>
+                    title: {{title}} <br>
+                    full title {{full_title}} <br>
+                    artist {{artist}} <br>
+                    lyrics {{lyrics}} <br>
+                </li>
+            {{/each}}
+            </ul>            
+        </div>
+
+    </div>
+</div>

@@ -3,6 +3,10 @@ var gumStream;
 //stream from getUserMedia() 
 var rec;
 //Recorder.js object 
+
+var recSection = document.getElementById('recordingSection');
+var uplSection = document.getElementById('uploadSection');
+
 var input;
 const recorder = document.getElementById('recorder');
 var recordButton = document.getElementById("recordButton");
@@ -74,3 +78,12 @@ function uploadAudioToServer(blob) {
     xhr.send(fd);
 }
 
+function showRecordSection() {
+    recSection.hidden = false;
+    uplSection.hidden = true;
+}
+
+function showFileSection() {
+    recSection.hidden = true;
+    uplSection.hidden = false;
+}

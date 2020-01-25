@@ -1,0 +1,17 @@
+div.lyric_search {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+p.desc {
+    font-size: 36px;
+}
+
+.lyrics_input {
+    width: 60%;
+}
+
+.lyric_search_inputs {
+    height: 100%;
+}

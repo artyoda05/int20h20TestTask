@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Voice search</h1>
 <div class="uploadSection">
     <form action="/search" method="POST" enctype="multipart/form-data">
@@ -12,6 +13,30 @@
     <button id="stopButton" onclick="stopRecording()" type="submit">Stop recording</button>
     <button id="uploadButton" onclick="uploadRecording()">Search by voice</button>
 </div>
+=======
+<div class="center">
+    <div class="voice_search_menu">
+        <h1>Voice search</h1>
+        <div class="select_mode">
+            <button onclick="showFileSection()" class="select_mode_button _button">Upload audio file</button>
+            <button onclick="showRecordSection()" class="select_mode_button _button">Record voice</button>
+        </div>
+        <div id="uploadSection" hidden>
+            <form action="">
+                <p>Choose an audio file to guess the song</p>
+                <input class="_button" id="audioFile" type="file" accept="audio/*">
+                <input class="_button" type="submit" value="Search by lyrics">
+            </form>
+        </div>
+        <div id="recordingSection" hidden>
+            <p>Record an audio file to guess the song</p>
+            <button class="_button" id="recordButton" onclick="startRecording()">Record</button>
+            <button class="_button" id="stopButton" onclick="stopRecording()" type="submit">Stop recording</button>
+            <button class="_button" id="uploadButton" onclick="uploadRecording()">Search by voice</button>
+        </div>
+>>>>>>> fffc259781ba7d21f636272ec0c6f7429053521b
 
+    </div>
+</div>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 <script src="scripts/voiceSearchScript.js"></script>
