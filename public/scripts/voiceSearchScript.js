@@ -78,6 +78,7 @@ function uploadAudioToServer(blob) {
 }
 
 function showRecordSection() {
+    
     recSection.hidden = false;
     uplSection.hidden = true;
 }

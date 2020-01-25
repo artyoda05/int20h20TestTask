@@ -15,3 +15,15 @@ p.desc {
 .lyric_search_inputs {
     height: 100%;
 }
+
+.song_results {
+    margin: 100px;
+    padding: 50px;
+}
+
+.song {
+    background-color: rgb(112, 43, 177);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}

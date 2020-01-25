@@ -7,21 +7,17 @@
                 <input class="_button" class="lyrics_input" type="submit" value="Search">
             </div>
         </form>
-
-        <div style="margin-top: 100px;">
-            <ul>
-            {{#each data}}
-                <li>
-                    song id: {{song_id}} <br>
-                    artist id: {{artist_id}} <br>
-                    title: {{title}} <br>
-                    full title {{full_title}} <br>
-                    artist {{artist}} <br>
-                    lyrics {{lyrics}} <br>
-                </li>
-            {{/each}}
-            </ul>            
-        </div>
-
     </div>
+</div>
+<div class="song_results">
+    <h2>Results:</h2>
+    <ul class="songs_info">
+        {{#each data}}
+        <div class="song">
+            <p>Title: {{title}}</p>
+            <p>Artist: {{artist}}</p>
+            <p>Lyrics<br> {{lyrics}}</p>
+        </div>
+        {{/each}}
+    </ul>
 </div>
