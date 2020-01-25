@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "DEBUG=myapp:* nodemon ./bin/www",
-    "start2": "node ./bin/www"
+    "serve": "node ./bin/www"
   },
   "repository": {
     "type": "git",

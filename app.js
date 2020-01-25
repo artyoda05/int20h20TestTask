@@ -28,9 +28,6 @@ app.use('/textSearch', textSearchRouter);
 app.use('/voiceSearch', voiceSearchRouter);
 app.use('/guessingGame', guessingGameRouter);
 
-var apiSearch = require('./routes/apiSearch');
-app.use(apiSearch);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

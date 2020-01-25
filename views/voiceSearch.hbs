@@ -3,10 +3,10 @@
         <h1>Voice search</h1>
         <div class="select_mode">
             <button onclick="showFileSection()" class="select_mode_button _button">Upload audio file</button>
-            <button onclick="showRecordSection()" class="select_mode_button _button">Record voice</button>
+            <!-- <button onclick="showRecordSection()" class="select_mode_button _button">Record voice</button> -->
         </div>
         <div id="uploadSection" hidden>
-            <form action="search" method="POST" enctype="multipart/form-data">
+            <form action="voiceSearch" method="POST" enctype="multipart/form-data">
                 <p>Choose an audio file to guess the song</p>
                 <input class="_button" id="audioFile" type="file" accept="audio/*" name="audio_data">
                 <input class="_button" type="submit" value="Search">

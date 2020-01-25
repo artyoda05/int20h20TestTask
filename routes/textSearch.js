@@ -22,10 +22,10 @@ router.get('/', async function (req, res, next) {
   for(let i = 0; i < data.result.length; i++){
     const artist = data.result[i].artist;
     const track = data.result[i].title;
-    const response = await fetch(`https://api.deezer.com/search?q=artist:"${artist}"track:"${track}"`);
     
     var deezerData;
     try {
+      const response = await fetch(`https://api.deezer.com/search?q=artist:"${artist}"track:"${track}"`);
       deezerData = await response.json();
     }
     catch(e){}
