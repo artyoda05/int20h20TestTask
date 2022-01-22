@@ -30,7 +30,7 @@
     "hbs": "^4.1.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
     "recorder-js": "^1.0.7",
